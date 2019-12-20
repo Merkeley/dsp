@@ -1,6 +1,6 @@
 [Think Stats Chapter 7 Exercise 1](http://greenteapress.com/thinkstats2/html/thinkstats2008.html#toc70) (weight vs. age)
 
-'''python
+```python
   import first
 
   live, firsts, others = first.MakeFrames()
@@ -13,9 +13,9 @@
                    ylabel='Birth Weight (lbs)',
                    axis=[12, 50, 0, 20],
                    legend=False)
-'''
+```
 **Plot output here**
-'''Python
+```python
   birth_bins = np.arange(10,50, 1)
   birth_indices = np.digitize(preg_age, birth_bins)
   birth_groups = live.groupby(birth_indices)
@@ -31,19 +31,20 @@
                    ylabel='Birth Weight (lbs)',
                    axis=[10,50,0,14],
                    legend=False)
-'''
+```
                  
 **Plot output here**
-'''
+```python
 np.corrcoef(preg_age, birth_weight)
-'''
+```
 
 *Output
 array([[1.        , 0.06883397],
        [0.06883397, 1.        ]])*
 
+```python
 SpearmanCorr(preg_age, birth_weight)
-
+```
 *Output
 0.09461004109658226
 
