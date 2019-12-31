@@ -1,7 +1,37 @@
 [Think Stats Chapter 8 Exercise 3](http://greenteapress.com/thinkstats2/html/thinkstats2009.html#toc77)
 
 ---
+```Python
+def SimulateMany(lam, game_count) :
+    goals = []
+    
+    for i in range(game_count) :
+        goals.append(SimulateGame(lam))
+    
+    errs = list(np.array(goals) - lam)
+    mean_err = np.mean(errs)
+    rmse = RMSE(goals, lam)
+    
+    return(mean_err, rmse, goals)
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+mean_err, rmse, goals = SimulateMany(3, 100)
+mean_err, rmse, goals
+```
+**This simulation method seems to cluster the samples at or below the mean.
 
+Plot the sampling distribution of the estimates and the 90% confidence interval.
+
+What happens to sampling error for increasing values of lam?
+
+```Python
+
+goal_pmf = thinkstats2.Pmf(goals)
+thinkplot.Pmfs([goal_pmf])
+
+goal_cdf = thinkstats2.Cdf(goals)
+
+ci = (goal_cdf.Percentile(5), goal_cdf.Percentile(95))
+ci
+```
+Sampling error will increase as the total average goals increases
 ---
