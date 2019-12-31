@@ -27,10 +27,8 @@ What happens to sampling error for increasing values of lam?
 
 ```Python
 
-goal_pmf = thinkstats2.Pmf(goals)
-thinkplot.Pmfs([goal_pmf])
-
 goal_cdf = thinkstats2.Cdf(goals)
+thinkplot.Cdfs([goal_cdf])
 
 ci = (goal_cdf.Percentile(5), goal_cdf.Percentile(95))
 ci
