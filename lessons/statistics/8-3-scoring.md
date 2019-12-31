@@ -17,7 +17,9 @@ def SimulateMany(lam, game_count) :
 mean_err, rmse, goals = SimulateMany(3, 100)
 mean_err, rmse, goals
 ```
-**This simulation method seems to cluster the samples at or below the mean.
+The sample size is large enough that it should be unbiased.
+
+---
 
 Plot the sampling distribution of the estimates and the 90% confidence interval.
 
@@ -33,5 +35,7 @@ goal_cdf = thinkstats2.Cdf(goals)
 ci = (goal_cdf.Percentile(5), goal_cdf.Percentile(95))
 ci
 ```
-Sampling error will increase as the total average goals increases
+
+Sampling error will increase as the average number of goals increases.
+
 ---
