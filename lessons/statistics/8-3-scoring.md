@@ -17,7 +17,7 @@ def SimulateMany(lam, game_count) :
 mean_err, rmse, goals = SimulateMany(3, 100)
 mean_err, rmse, goals
 ```
-The sample size is large enough that it should be unbiased.
+The sample size (number of goals) is small which will lead to biased estimates.
 
 ---
 
