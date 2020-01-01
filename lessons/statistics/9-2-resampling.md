@@ -33,11 +33,17 @@ print('Permute t-max for Pregnancy Lenght', ht.MaxTestStat())
 ---
 **Output:**
 Resample p-value for Pregnancy Length 0.157
+
 Resample acutal for Pregnancy Length 0.07803726677754952
+
 Resample t-max for Pregnancy Length 0.1906588267217586
+
 Permute p-value for Pregnancy Length 0.17
+
 Permute actual for Pregnancy Length 0.07803726677754952
+
 Permute t-max for Pregnancy Lenght 0.23126602763123572
+
 
 ```Pthon
 data = firsts.dropna(subset=['totalwgt_lb']).totalwgt_lb.values, others.dropna(subset=['totalwgt_lb']).totalwgt_lb.values
@@ -55,11 +61,17 @@ print('Permute t-max for Birth Weight', ht.MaxTestStat())
 ```
 **Output:**
 Resample p-value for Birth Weight 0.0
+
 Resample actual for Birth Weight 0.12476118453549034
+
 Resample t-max for Birth Weight 0.0891502590451303
+
 Permute p-value for Birth Weight 0.001
+
 Permute actual for Birth Weight 0.12476118453549034
+
 Permute t-max for Birth Weight 0.1265335998754722
+
 
 The model used made some minor difference in p-values for both pregnancy length and birth weight
    
